@@ -1,0 +1,202 @@
+:root {
+  /*---Font---*/
+  --font-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --font-soft-red: hsl(14, 88%, 65%);
+  --font-very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --font-dark-grayish-blue: hsl(240, 6%, 50%);
+  --font-size: 12px;
+  --font-family: "Kumbh Sans", sans-serif;
+  /*---dividers*/
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.clicked {
+  transform: rotate(180deg);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  height: 50%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container .illuBox {
+  position: absolute;
+  top: 200px;
+  left: -95px;
+  z-index: 10;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.illust {
+  width: 50%;
+  height: 100%;
+  background: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: left -600px top -300px;
+}
+
+.illust img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 14%;
+  left: -21%;
+}
+
+.faq {
+  width: 50%;
+  height: 100%;
+  padding: 4em 4em 4em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq .title {
+  margin-bottom: 3%;
+}
+
+.faq .qList {
+  width: 100%;
+  height: 100%;
+
+  min-width: 236px;
+}
+
+.faq .qList li {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size);
+  border-bottom: var(--light-grayish-blue) solid 1px;
+}
+
+.faq .qList li:hover {
+  color: var(--font-soft-red);
+  cursor: pointer;
+}
+
+.qAndarrow {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answers {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: none;
+  text-align: left;
+}
+
+.show {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: block;
+  text-align: left;
+}
+
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 470px) {
+  .container {
+    width: 80vw;
+    height: 60vh;
+  }
+  .container .illuBox {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: -45px;
+    left: 30px;
+  }
+
+  .main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .illust {
+    width: 100%;
+    max-width: 380px;
+    height: 30%;
+    background-size: 100%;
+    background-position: top -120px center;
+  }
+
+  .illust img {
+    max-width: 280px;
+    position: relative;
+    top: -110px;
+    left: 10px;
+  }
+
+  .faq {
+    width: 100%;
+    height: 70%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
