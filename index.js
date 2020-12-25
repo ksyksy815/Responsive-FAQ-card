@@ -18,7 +18,7 @@ for (i = 0; i < questions.length; i++) {
 /*---Put arrow icons into buttons--- */
 for (i = 0; i < buttons.length; i++){
     let arrowImg = document.createElement('img');
-    arrowImg.setAttribute('src', '/images/icon-arrow-down.svg');
+    arrowImg.setAttribute('src', 'images/icon-arrow-down.svg');
     buttons[i].appendChild(arrowImg);
 }
 
