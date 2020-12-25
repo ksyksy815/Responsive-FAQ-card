@@ -72,7 +72,7 @@ body {
 .illust {
   width: 50%;
   height: 100%;
-  background: url(/images/bg-pattern-desktop.svg);
+  background: url(images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: left -600px top -300px;
 }
